@@ -23,10 +23,10 @@ def solve_c_clockwise(arr, s_x, s_y):
             res+=1
             res_max= max(res_max, res)
             # print("---")
-            # print(x,y)
+            print(x,y)
         else:
             res=0
-            # print("")
+            print("")
 
         arr[x][y]=2
         
@@ -75,7 +75,7 @@ def solve_clockwise(arr, s_x, s_y):
     else:
         current_move= "r"
     
-    print(current_move)
+    # print(current_move)
 
     res=0
     res_max= 0
@@ -131,11 +131,11 @@ def redRope(n,m,sp,ca,a):
     if sp==0:
         s_x, s_y= 0,0
     elif sp==1:
-        s_x, s_y= 0,1
+        s_x, s_y= 0,m-1
     elif sp==2:
-        s_x, s_y= 1,1
+        s_x, s_y= n-1,m-1
     else:
-        s_x, s_y= 1,0
+        s_x, s_y= n-1,0
 
     if ca==0:
         f= solve_clockwise
@@ -144,7 +144,4 @@ def redRope(n,m,sp,ca,a):
 
     res= f(a, s_x, s_y)
     return res
-
-
-
 
