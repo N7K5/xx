@@ -23,10 +23,10 @@ def solve_c_clockwise(arr, s_x, s_y):
             res+=1
             res_max= max(res_max, res)
             # print("---")
-            print(x,y)
+            # print(x,y)
         else:
             res=0
-            print("")
+            # print("")
 
         arr[x][y]=2
         
