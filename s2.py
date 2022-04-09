@@ -1,7 +1,7 @@
 
 
 def do_move(pos, str, times):
-    # print(str, times)
+    print(str, times)
     x,y,z= pos[0],pos[1],pos[2]
     U,D,E,W,N,S=0,0,0,0,0,0
     for c in str:
@@ -14,9 +14,9 @@ def do_move(pos, str, times):
     E= (E-W)*times
     S= (S-N)*times
     D= (D-U)*times
-    x= (x+E)%1e8
-    y= (y+S)%1e8
-    z= (z+D)%1e8
+    x= (x+E)%(1e8+1)
+    y= (y+S)%(1e8+1)
+    z= (z+D)%(1e8+1)
     return[x,y,z]
 
 
@@ -52,9 +52,4 @@ def solve(str):
 
 def secretAgent(n, arr):
     res= solve(arr)
-    return res[0]+" "+res[1]+" "+res[2]
-
-# str= "UU2[EE3[DD1[SS]]]W"
-str= "D2[N1[3[FG]]]"
-
-print(solve(str))
+    return str(res[0])+" "+str(res[1])+" "+str(res[2])
