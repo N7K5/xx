@@ -62,8 +62,14 @@ def main():
     res= solve(arr)
     print(res)
 
+
+def main_test():
+    T= 10
+    for _ in range(T):
+        main()
+
 if __name__=="__main__":
-    main()
+    main_test()
 
 # office= [[39,9]]
 # home= [[97, 61]]
