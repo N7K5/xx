@@ -57,7 +57,8 @@ def main():
     for x in range(N+2):
         arr[x][0]= d[cur]
         arr[x][1]= d[cur+1]
-        cur+=1
+        cur+=2
+    arr[1],arr[-1]= arr[-1],arr[1]
     res= solve(arr)
     print(res)
 
