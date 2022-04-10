@@ -50,8 +50,14 @@ def solve(arr):
 
 
 def main():
-    N= int(input())
-    d= [int(x) for x in input().split(" ")]
+    ip=""
+    while(len(ip)==0):
+        ip= input()
+    N= int(ip)
+    ip=""
+    while(len(ip)==0):
+        ip= input()
+    d= [int(x) for x in ip.split(" ")]
     cur=0
     arr= [[0,0] for _ in range(N+2)]
     for x in range(N+2):
@@ -64,7 +70,7 @@ def main():
 
 
 def main_test():
-    T= 10
+    T= 1
     for _ in range(T):
         main()
 
